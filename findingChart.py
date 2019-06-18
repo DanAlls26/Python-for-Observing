@@ -47,7 +47,7 @@ print('')
 # angular size/initial conditions of the rectangles 
 
 #main imaging ccd
-imcordx = np.array([0.20,0.20,0.6,0.6,0.4])
+imcordx = np.array([0.2460,0.2460,0.5541,0.5541,0.4])
 imcordy = np.array([0.17,0.62,0.62,0.17,0.4])
 
 #guiding ccd
