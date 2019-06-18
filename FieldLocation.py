@@ -54,14 +54,11 @@ mlength = 4008
 mheight = 2745
 binning = 2
 
-#path = input (" Enter path:")
-path = 'C:/Users/Daniel/Desktop/2019-06-03/'
+path = input (" Enter path:")
 print(path)
-#mimage = input(" Enter the name of the target image(include .fit/.fits extension):")
-mimage = 'fdzTrES-3bcal.fit'
+mimage = input(" Enter the name of the target image(include .fit/.fits extension):")
 print(mimage)
-#gimage = input(" Enter the name of the guider image(include .fit/.fits extension):")
-gimage = 'Autoguider-Image2.fit'
+gimage = input(" Enter the name of the guider image(include .fit/.fits extension):")
 print(gimage)
 
 gim = fits.getdata(path+gimage)
@@ -98,9 +95,9 @@ gimcordy = (gdecW-leftdecW)/degpix - 0.5
 # print(graW-leftraW)
 # print(gdecW-leftdecW)
 
-print(mainW[4,0])
-print(mainW[4,1])
-'''
+#print(mainW[4,0])
+#print(mainW[4,1])
+
 plt.figure()
 ax,hdu = plot_finder_image(center,fov_radius = fov*u.deg)
 point = patches.Circle( (imcordx[0],imcordy[0]), radius = 3,color='red')
@@ -124,8 +121,3 @@ ax.add_patch(gpoint2)
 ax.add_patch(gpoint3)
 
 plt.show()
-
-
-print('Finding Chart Completed')
-
-'''
