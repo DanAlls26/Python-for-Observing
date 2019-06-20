@@ -1,4 +1,4 @@
-#Importing packages
+ #Importing packages
 import numpy as np 
 import matplotlib.pyplot as plt 
 from astroplan.plots import plot_finder_image
@@ -23,8 +23,6 @@ Generating a Finding chart for the Breyo Observatory:
         - scipy
         - astroplan  (requires visual C++ build tools)
         - astroquery (requires visual C++ build tools)
-        - argparse
-        - glob 
     - Functionality:
         - generates a finding chart
     - useage:
@@ -33,7 +31,12 @@ Generating a Finding chart for the Breyo Observatory:
         - type %run findingChart.py
         - follow the directions appearing in the terminal 
     - To do:
-        - improve fact list 
+        - improve fact list
+    - Future programs: 
+        - full sky map 
+        - airmass chart
+        - utilize argparse (write help) 
+        - overarching program that runs everything at once
 
 ################################################################################
 --------------------------------------------------------------------------------
@@ -47,16 +50,28 @@ print('')
 # angular size/initial conditions of the rectangles 
 
 #main imaging ccd
-imcordx = np.array([0.2460,0.2460,0.5541,0.5541,0.4])
-imcordy = np.array([0.17,0.62,0.62,0.17,0.4])
+imcordx = np.array([0.25,0.25,0.55,0.55,0.4])
+imcordy = np.array([0.17833335000000003,0.62166665,0.62166665,0.17833335000000003,0.4])
 
 #guiding ccd
 gcordx = np.array([0.12,0.12,0.18,0.18,0.16])
 gcordy = np.array([0.38, 0.42, 0.42, 0.38,0.4])
 
 #field of view of targeted space map
-fov = 0.4
+print('---------------------------------------------')
+print('Please put Finding Chart field of view radius.')
+print('If you are unsure please enter 0.4.')
+print('')
+fov = float(input( "Finding chart field of view radius in degrees:"))
+print('---------------------------------------------')
+print('')
+print('')
+# for debugging -------------------------(comment out when done)--------
+#fov = 0.4
+# -------------------------------------------------------------------
+
 degpix = fov/150
+
 print('---------------------------------------------')
 print('Please put in the target Coordinates below.')
 print('')
@@ -176,10 +191,5 @@ print('Fact List: (WIP)')
 print('---------------------------------------------')
 print('The center RA of this finding image is %(ra)f degrees' %{'ra': tra})
 print('The center DEC of this finding image is %(dec)f degrees' %{'dec': tdec})
+# print('Set the rotator angle to: %(r)f' %{'r': (rotate+ 0)}) #This needs calibration
 print('---------------------------------------------')
-
-  
-
-
-
-
