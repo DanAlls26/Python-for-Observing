@@ -22,7 +22,6 @@ Generating a Finding chart for the Breyo Observatory:
         - Matplotlib
         - scipy
         - astroplan  (requires visual C++ build tools)
-        - astroquery (requires visual C++ build tools)
     - Functionality:
         - generates a finding chart
     - useage:
