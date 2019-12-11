@@ -1,2 +1,2 @@
-# observatory_python
-2019 summer python code for observing 
+# Python for Observing
+Extra place to store 2019 summer code.
