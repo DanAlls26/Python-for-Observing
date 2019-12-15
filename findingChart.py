@@ -25,7 +25,7 @@ import astropy.units as u
 
 import argparse
 
-<<<<<<< HEAD
+
 # Setting Up Command Line Arguments -----------------------------------------------------
 
 parser = argparse.ArgumentParser()
@@ -88,49 +88,7 @@ offdec = float(off[1])
 
 if verbose == True:
     print("Defining the shape of the main ccd's sky footprint.")
-    
-=======
-'''
-#################################################################################
---------------------------------------------------------------------------------
-################################################################################
-Generating a Finding chart for the Breyo Observatory:
 
-    - Current version for the SBIG STL-11000M ccd ONLY!
-    - required packages:
-        - Numpy
-        - Astropy
-        - Matplotlib
-        - scipy
-        - astroplan  (requires visual C++ build tools)
-    - Functionality:
-        - generates a finding chart
-    - useage:
-        - open an python environment terminal (ie anaconda prompt)
-        - move to directory with this folder in it
-        - type %run findingChart.py
-        - follow the directions appearing in the terminal 
-    - To do:
-        - improve fact list
-    - Future programs: 
-        - full sky map 
-        - airmass chart
-        - utilize argparse (write help) 
-        - overarching program that runs everything at once
-
-################################################################################
---------------------------------------------------------------------------------
-################################################################################
-'''
-print('---------------------------------------------')
-targetname = input('Please input the name of your target:')
-print('---------------------------------------------')
-print('')
-print('')
-# angular size/initial conditions of the rectangles 
-
-#main imaging ccd
->>>>>>> 39c9b0a7315465f4ea6f297b718d1d92138b0ec5
 imcordx = np.array([0.25,0.25,0.55,0.55,0.4])
 imcordy = np.array([0.17833335000000003,0.62166665,0.62166665,0.17833335000000003,0.4])
 
